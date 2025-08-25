@@ -7,15 +7,13 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
             if(nums[i]+nums[k]==target){
                 Size[0]=i;
                 Size[1]=k;
-                *returnSize=2;
-                return Size;
-                
+               
             }
         }
        
     }
-    free(Size);
-    return NULL;
+    *returnSize=2;
+    return Size;
 }
     
     
