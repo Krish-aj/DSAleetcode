@@ -1,0 +1,12 @@
+bool isBalanced(char* num) {
+    int i,even=0,odd=0;
+    int length = strlen(num);
+
+    for(i=0;i<length;i++){
+        if(i%2==0)   // check for even index
+         even+=num[i]-'0'; // convert ascii into int
+         else
+         odd+=num[i]-'0';
+    }
+    return (even==odd);
+}
