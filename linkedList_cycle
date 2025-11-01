@@ -1,0 +1,14 @@
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        ListNode fast=head,slow=head;
+        while(fast!=null && fast.next!=null ){ //checks if list has more than 2 nodes or not
+            slow=slow.next;
+            fast=fast.next.next;    // fast moves double step than slow
+            
+            if(fast==slow){
+                return true;    // if cycle then fast will point same as slow 
+            } 
+        }
+        return false;
+    }
+}
